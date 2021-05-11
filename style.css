@@ -1,0 +1,81 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+  --p: hsla(0, 0%, 100%, 0.75);
+  --button: hsl(0, 0%, 95%);
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--p);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+h2 {
+  color: var(--button);
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  min-width: 20rem;
+}
+
+img {
+  height: 2rem;
+  width: 4rem;
+}
+
+button {
+  font-family: "Lexend Deca", sans-serif;
+  width: 7rem;
+  height: 2rem;
+  border-radius: 20px;
+  border: none;
+  margin-top: 3rem;
+  font-size: 0.7rem;
+}
+
+.sedans {
+  background-color: var(--orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.sedans button {
+  color: var(--orange);
+}
+
+.suvs {
+  background-color: var(--cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.suvs button {
+  color: var(--cyan);
+}
+
+.luxury {
+  background-color: var(--dark-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.luxury button {
+  color: var(--dark-cyan);
+}
