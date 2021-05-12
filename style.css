@@ -1,7 +1,17 @@
-:root {
-  margin: 0;
+html,
+body,
+h2,
+p {
+  margin: 0 0 0 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  background-color: gray;
+}
+
+:root {
   --orange: hsl(31, 77%, 52%);
   --cyan: hsl(184, 100%, 22%);
   --dark-cyan: hsl(179, 100%, 13%);
@@ -9,39 +19,62 @@
   --button: hsl(0, 0%, 95%);
 }
 
+a {
+  font-family: "Lexend Deca", sans-serif;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
 p {
   font-family: "Lexend Deca", sans-serif;
   color: var(--p);
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-weight: 100;
   text-align: left;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
 }
 
 h2 {
   color: var(--button);
   font-family: "Big Shoulders Display", cursive;
-  font-size: 2rem;
+  font-size: 2.8rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  min-width: 20rem;
+  height: 60vh;
+  width: 60vw;
 }
 
 img {
-  height: 2rem;
-  width: 4rem;
+  height: auto;
+  width: 4.6em;
 }
 
 button {
-  font-family: "Lexend Deca", sans-serif;
-  width: 7rem;
-  height: 2rem;
+  background-color: var(--button);
+  width: 8rem;
+  height: 2.5rem;
   border-radius: 20px;
   border: none;
   margin-top: 3rem;
-  font-size: 0.7rem;
+}
+
+button:hover {
+  opacity: 0.5;
+  transition: all 0.5s;
 }
 
 .sedans {
@@ -50,9 +83,10 @@ button {
   flex-direction: column;
   justify-content: space-around;
   padding: 3rem;
+  width: 30vw;
 }
 
-.sedans button {
+.sedans a {
   color: var(--orange);
 }
 
@@ -62,9 +96,10 @@ button {
   flex-direction: column;
   justify-content: space-around;
   padding: 3rem;
+  width: 30vw;
 }
 
-.suvs button {
+.suvs a {
   color: var(--cyan);
 }
 
@@ -74,8 +109,81 @@ button {
   flex-direction: column;
   justify-content: space-around;
   padding: 3rem;
+  width: 30vw;
 }
 
-.luxury button {
+.luxury a {
   color: var(--dark-cyan);
+}
+
+.attribution {
+  position: relative;
+  top: 10rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    height: 100vh;
+    width: 90%;
+  }
+
+  .sedans {
+    width: auto;
+    margin-top: 2rem;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .suvs {
+    width: auto;
+  }
+
+  .luxury {
+    width: auto;
+    margin-bottom: 2rem;
+    border-radius: 0 0 10px 10px;
+  }
+
+  img {
+    height: auto;
+    width: 4em;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+    margin: 2rem 0;
+  }
+
+  p {
+    font-weight: 0;
+    text-align: left;
+    line-height: 1.5rem;
+    letter-spacing: 0;
+  }
+
+  button {
+    opacity: 1;
+    width: 40vw;
+    height: 2.8rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+  button:hover {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+
+  body {
+    height: 100vh;
+    align-items: center;
+  }
+
+  .attribution {
+    position: absolute;
+    top: 1500px;
+  }
+
+  a {
+    letter-spacing: 0;
+  }
 }
